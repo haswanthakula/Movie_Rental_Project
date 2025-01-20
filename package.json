@@ -1,6 +1,6 @@
 {
-  "homepage": "https://haswanthakula.github.io/Movie_Rental_Project",
-  "name": "movie-react",
+  "homepage": ".",
+  "name": "movie_rental_project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

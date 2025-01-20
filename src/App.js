@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { MovieProvider } from './contexts/MovieContext';
 import { CartProvider } from './contexts/CartContext';
 import { OrderProvider } from './contexts/OrderContext';
@@ -77,7 +77,8 @@ const App = () => {
                   <Route path="/admin/sales-report" element={<SalesReport />} />
                   
                   {/* 404 Route */}
-                  <Route path="*" element={<NotFound />} />
+                  <Route path="*" element={<Navigate to="/404" />} />
+                  <Route path="/404" element={<NotFound />} />
                 </Routes>
               </Suspense>
               <ToastContainer
